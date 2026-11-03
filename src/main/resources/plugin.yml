@@ -1,0 +1,12 @@
+name: UltimateAntiDupe
+version: 1.0.0
+main: com.elytrapvp.antidupe.UltimateAntiDupe
+api-version: '1.21'
+description: Elytra PvP için çift katmanlı anti-dupe koruması.
+authors: [Admin]
+commands:
+  antidupe:
+    description: Anti-dupe durumunu gösterir.
+    permission: antidupe.admin
+    usage: /antidupe
+    
