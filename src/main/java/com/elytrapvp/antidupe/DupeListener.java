@@ -115,7 +115,8 @@ public class DupeListener implements Listener {
         r.lastViolation = now;
         if (++r.violations >= violationLimit) {
             r.violations = 0;
-            Bukkit.getScheduler().runTask(plugin, p::closeInventory);
+            // DÜZELTİLEN YER (Ambiguous method reference hatasını önlemek için lambda eklendi)
+            Bukkit.getScheduler().runTask(plugin, () -> p.closeInventory());
             plugin.alert(plugin.rawMsg("alert-rate", p.getName(), r.count + "/sn"));
             scanLater(p, 1L, "RATE_LIMIT");
         }
