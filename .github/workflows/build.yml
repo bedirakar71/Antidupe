@@ -1,0 +1,30 @@
+name: Build AntiDupe Plugin
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Klonla
+      uses: actions/checkout@v3
+
+    - name: Java 16 Kur
+      uses: actions/setup-java@v3
+      with:
+        java-version: '16'
+        distribution: 'temurin'
+        cache: 'maven'
+
+    - name: Maven ile Derle
+      run: mvn clean package --file pom.xml
+
+    - name: Jar Dosyasını Kaydet
+      uses: actions/upload-artifact@v3
+      with:
+        name: AntiDupe-Plugin
+        path: target/*.jar
