@@ -1,0 +1,42 @@
+prefix: "&8[&cAntiDupe&8] "
+
+settings:
+  # Saniyede izin verilen maksimum envanter tıklaması (modlu/paket dupeleri için)
+  max-clicks-per-second: 40
+  # Bu kadar ihlalden sonra envanter zorla kapatılır
+  violations-before-close: 5
+  # Container açıkken tıklamadan kaç tick sonra envanter taransın
+  scan-delay-ticks: 5
+  # Her X saniyede tüm oyuncuları tara (0 = kapalı)
+  periodic-scan-seconds: 60
+  # İki oyuncuda aynı eşya kimliği varsa (doğrulanmış) kopyayı karantinaya al
+  cross-player-detection: true
+  # Creative oyuncular container (sandık, shulker vb.) kullanamasın
+  block-creative-containers: true
+  # Mod kanalı kaydeden istemciler: FLAG (sıkı denetim) veya KICK
+  modded-client-action: FLAG
+  modded-channel-prefixes: ["fml", "forge", "fabric", "neoforge", "quilt"]
+  # Container açıkken engellenecek komutlar
+  blocked-commands-while-container-open: ["ec", "enderchest", "echest", "pv", "vault", "chest"]
+  # Takip dışı bırakılacak materyaller (örn. "ELYTRA")
+  ignored-materials: []
+  # Karantina kayıtları kaç gün sonra silinsin (sadece geri verilmiş olanlar)
+  quarantine-retention-days: 30
+
+messages:
+  no-permission: "&cBu komut için yetkin yok."
+  quarantined-player: "&c{0} eşyan şüpheli bulunup karantinaya alındı. Hata olduğunu düşünüyorsan yetkililere bildir."
+  alert-scan: "&e{0} &7→ &c{1} &7eşya karantinaya alındı &8[&7{2}&8] &7Detay: &f{3}"
+  alert-rate: "&e{0} &7aşırı hızlı tıklıyor (&c{1}&7), envanteri kapatıldı."
+  alert-modded: "&e{0} &7mod kanalı kaydetti: &f{1} &7(sıkı denetim)"
+  alert-block: "&e{0} &7için şüpheli eylem engellendi: &c{1}"
+  alert-death: "&e{0} &7ölüm drop'unda kopya eşya silindi (&c#{1}&7)."
+  creative-blocked: "&cCreative modda container kullanamazsın."
+  command-blocked: "&cContainer açıkken bu komutu kullanamazsın."
+  modded-kick: "Dupe koruması: Bu sunucuda mod istemcisi kullanılamaz."
+  not-found: "&cKarantina kaydı bulunamadı."
+  already-restored: "&cBu kayıt zaten geri verilmiş."
+  no-target: "&cHedef oyuncu çevrimiçi değil."
+  restored: "&aKayıt &e#{0} &a{1} oyuncusuna geri verildi."
+  reloaded: "&aYeniden yüklendi."
+  
