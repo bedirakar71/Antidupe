@@ -24,7 +24,8 @@ jobs:
       run: mvn clean package --file pom.xml
 
     - name: Jar Dosyasını Kaydet
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: AntiDupe-Plugin
         path: target/*.jar
+        
