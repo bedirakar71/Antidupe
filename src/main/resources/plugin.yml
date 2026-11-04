@@ -1,0 +1,22 @@
+name: AntiDupe
+main: com.elytrapvp.antidupe.AntiDupe
+version: 2.0.0
+api-version: 1.16
+author: ElytraPvP
+description: Önleyici + karantinalı dupe koruması
+
+commands:
+  antidupe:
+    description: AntiDupe yönetim komutu
+    aliases: [ad]
+
+permissions:
+  antidupe.admin:
+    description: Yönetim komutları
+    default: op
+  antidupe.alert:
+    description: Dupe uyarılarını görür
+    default: op
+  antidupe.bypass:
+    description: Tüm kontrolleri atlar (dikkatli ver)
+    default: false
